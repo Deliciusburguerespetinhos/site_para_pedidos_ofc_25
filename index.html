@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deliciu's Burger & Espetinhos - Faça seu Pedido</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="logo-container">
+  <img src="logo.png" alt="Logo" class="logo-img">
+  <div>
+    <div class="logo-text">DELICIU'S</div>
+    <div class="subtitle">Burger & Espetinhos</div>
+    <div class="tagline">Sabor Autêntico desde 2022</div>
+  </div>
+</div>
+
+        <div class="menu-section">
+            <h2 class="section-title">
+               HAMBÚRGUERS TRADICIONAIS</h2>
+            <div class="menu-grid" id="burgers">
+                <div class="menu-item" data-item="X-Burger" data-price="8.00">
+                    <div class="item-name">X-Burger</div>
+                    <div class="item-description">PÃO, MAIONESE, HAMBÚRGUER ,PRESUNTO E QUEIJO</div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('X-Burger', -1)">-</button>
+                        <span class="quantity-display" id="qty-X-Burger">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('X-Burger', 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-item="Salada" data-price="10.00">
+                    <div class="item-name">X-Salada</div>
+                    <div class="item-description">PÃO, MAIONESE, HAMBÚRGUER, ALFACE, TOMATE, PRESUNTO E QUEIJO</div>
+                    <div class="item-price">R$ 10,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Salada', -1)">-</button>
+                        <span class="quantity-display" id="qty-Salada">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Salada', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="X-Bacon" data-price="12.00">
+                    <div class="item-name">X-Bacon </div>
+                    <div class="item-description">PÃO, MAIONESE, HAMBÚRGUER, BACOM, ALFACE, TOMATE, PRESUNTO E QUEIJO </div>
+                    <div class="item-price">R$ 12,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('X-Bacon', -1)">-</button>
+                        <span class="quantity-display" id="qty-X-Bacon">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('X-Bacon', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="X-Frango" data-price="12.00">
+                    <div class="item-name">X-Frango</div>
+                    <div class="item-description">PÃO, MAIONESE, HAMBÚRGUER, FRANGO, ALFACE, TOMATE, PRESUNTO E QUEIJO </div>
+                    <div class="item-price">R$ 12,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('X-Frango', -1)">-</button>
+                        <span class="quantity-display" id="qty-X-Frango">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('X-Frango', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="X-Calabresa" data-price="12.00">
+                    <div class="item-name">X-Calabresa</div>
+                    <div class="item-description">PÃO, MAIONESE, HAMBÚRGUER, CALABRESA, ALFASE, TOMATE, PRESUNTO E QUEIJO </div>
+                    <div class="item-price">R$ 12,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('X-Calabresa', -1)">-</button>
+                        <span class="quantity-display" id="qty-X-Calabresa">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('X-Calabresa', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="X-Egg" data-price="12.00">
+                    <div class="item-name">X-Egg</div>
+                    <div class="item-description">PÃO, MAIONESE, HAMBÚRGUER, EGG, ALFASE, TOMATE, PRESUNTO E QUEIJO </div>
+                    <div class="item-price">R$ 12,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('X-Egg', -1)">-</button>
+                        <span class="quantity-display" id="qty-X-Egg">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('X-Egg', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="X-Coração" data-price="14.00">
+                    <div class="item-name">X-Coração</div>
+                    <div class="item-description">PÃO, MAIONESE, HAMBÚRGUER, Coração, ALFASE, TOMATE, PRESUNTO E QUEIJO </div>
+                    <div class="item-price">R$ 14,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('X-Coração', -1)">-</button>
+                        <span class="quantity-display" id="qty-X-Coração">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('X-Coração', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="X-Tudo" data-price="18.00">
+                    <div class="item-name">X-Tudo</div>
+                    <div class="item-description">PÃO, MAIONESE, HAMBÚRGUER, CORAÇÃO CALABRESA, EGG, FRAGO, ALFACE, TOMATE, PRESUNTO E QUEIJO</div>
+                    <div class="item-price">R$ 18,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('X-Tudo', -1)">-</button>
+                        <span class="quantity-display" id="qty-X-Tudo">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('X-Tudo', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="section-title">➕ Adicional</h2>
+            <div class="menu-grid" id="Adicional">
+                <div class="menu-item" data-item="Hanburguer-adc" data-price="2.00">
+                    <div class="item-name">Hamburguer</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 2,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Hamburguer', -1)">-</button>
+                        <span class="quantity-display" id="qty-Hamburguer">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Hamburguer', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Bacon-adc" data-price="2.00">
+                    <div class="item-name">Bacon</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 2,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Bacon-adc', -1)">-</button>
+                        <span class="quantity-display" id="qty-Bacon-adc">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Bacon-adc', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Frango-adc" data-price="2.00">
+                    <div class="item-name">Frango</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 2,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Frango-adc', -1)">-</button>
+                        <span class="quantity-display" id="qty-Frango-adc">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Frango-adc', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Calabresa-adc" data-price="2.00">
+                    <div class="item-name">Calabresa</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 2,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Calabresa-adc', -1)">-</button>
+                        <span class="quantity-display" id="qty-Calabresa-adc">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Calabresa-adc', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Coracao-adc" data-price="4.00">
+                    <div class="item-name">Coração</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 4,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Coracao-adc', -1)">-</button>
+                        <span class="quantity-display" id="qty-Coracao-adc">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Coracao-adc', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Batata-adc" data-price="4.00">
+                    <div class="item-name">Batata</div>
+                    <div class="item-description">(150g)</div>
+                    <div class="item-price">R$ 4,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Batata', -1)">-</button>
+                        <span class="quantity-display" id="qty-Batata">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Batata', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="section-title">Deliciu´s</h2>
+            <h3 class="section-title">Linha Gold</h3>
+            <div class="menu-grid" id="Linhagold">
+                <div class="menu-item" data-item="Deliciu´s-burguer" data-price="18.00">
+                    <div class="item-name">Deliciu´s Burguer</div>
+                    <div class="item-description">PÃO BRIOCHE, MAIONESE DA CASA, 2 HAMBÚRGUER ARTESANAIS, CHEDDAR, MOLHO BARBECUE E CEBOLA CARAMELIZADA</div>
+                    <div class="item-price">R$ 18,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-burguer', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-burguer">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-burguer', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Deliciu´s-Salada" data-price="20.00">
+                    <div class="item-name">Deliciu´s Salada</div>
+                    <div class="item-description">PÃO BRIOCHE, MAIONESE DA CASA, 2 HAMBÚRGUER ARTESANAIS, CHEDDAR, ALFACE, TOMATE, MOLHO BARBECUE E CEBOLA CARAMELIZADA</div>
+                    <div class="item-price">R$ 20,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Salada', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-Salada">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Salada', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Deliciu´s-Pepperoni" data-price="30.00">
+                    <div class="item-name">Deliciu´s Pepperoni</div>
+                    <div class="item-description">PÃO BRIOCHE, MAIONESE DA CASA, 2 HAMBÚRGUER ARTESANAIS, CHEDDAR, PEPPERONI, ALFACE, TOMATE, MOLHO BARBECUE E CEBOLA CARAMELIZADA</div>
+                    <div class="item-price">R$ 30,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Pepperoni', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-Pepperoni">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Pepperoni', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Deliciu´s-Pig" data-price="24.00">
+                    <div class="item-name">Deliciu´s Pig</div>
+                    <div class="item-description">PÃO BRIOCHE, MAIONESE DA CASA, 2 HAMBÚRGUER ARTESANAIS, CHEDDAR, PANCETA DE PORCO, ALFACE, TOMATE, MOLHO BARBECUE E CEBOLA CARAMELIZADA</div>
+                    <div class="item-price">R$ 24,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Pig', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-Pig">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Pig', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Deliciu´s-Bacon" data-price="26.00">
+                    <div class="item-name">Deliciu´s Bacon</div>
+                    <div class="item-description">PÃO BRIOCHE, MAIONESE DA CASA, 2 HAMBÚRGUER ARTESANAIS, CHEDDAR, BACON, ALFACE, TOMATE, MOLHO BARBECUE E CEBOLA CARAMELIZADA</div>
+                    <div class="item-price">R$ 26,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Bacon', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-Bacon">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Bacon', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Deliciu´s-Picanha" data-price="28.00">
+                    <div class="item-name">Deliciu´s Picanha</div>
+                    <div class="item-description">PÃO BRIOCHE, MAIONESE DA CASA, 2 HAMBÚRGUER ARTESANAIS, CHEDDAR, PICANHA, ALFACE, TOMATE, MOLHO BARBECUE E CEBOLA CARAMELIZADA</div>
+                    <div class="item-price">R$ 28,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Picanha', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-Picanha">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Picanha', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Deliciu´s-Mignon" data-price="28.00">
+                    <div class="item-name">Deliciu´s Mignon</div>
+                    <div class="item-description">PÃO BRIOCHE, MAIONESE DA CASA, 2 HAMBÚRGUER ARTESANAIS, CHEDDAR, MIGNON, ALFACE, TOMATE, MOLHO BARBECUE E CEBOLA CARAMELIZADA</div>
+                    <div class="item-price">R$ 28,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Mignon', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-Mignon">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Mignon', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Deliciu´s-Coracao" data-price="26.00">
+                    <div class="item-name">Deliciu´s Coração</div>
+                    <div class="item-description">PÃO BRIOCHE, MAIONESE DA CASA, 2 HAMBÚRGUER ARTESANAIS, CHEDDAR, CORAÇÃO, ALFACE, TOMATE, MOLHO BARBECUE E CEBOLA CARAMELIZADA</div>
+                    <div class="item-price">R$ 26,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Coracao', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-Coracao">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Coracao', 1)">+</button>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-item="Deliciu´s-Super" data-price="35.00">
+                    <div class="item-name">Deliciu´s Super</div>
+                    <div class="item-description">PÃO BRIOCHE, MAIONESE DA CASA, 2 HAMBÚRGUER ARTESANAIS, FILÉ DE FRANGO, OVO, CALABRESA, BACON, ALFACE, TOMATE, CHEDDAR, MOLHO BARBECUE E CEBOLA CARAMELIZASA</div>
+                    <div class="item-price">R$ 35,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Super', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-Super">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-Super', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class=""></div>
+            <h2 class="section-title">TODOS OS LANCHE DA LINHA GOLD ACOMPANHAM (150g) DE BATATA FRITA</h2>
+            <div></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="section-title"> Lomitos</h2>
+            <div class="menu-grid" id="lomito">
+                <div class="menu-item" data-item="lomito-carne" data-price="20.00">
+                    <div class="item-name">Carne</div>
+                    <div class="item-description">PÃO SIRIO, CARNE, BATATA FRITA, PASTA DE ALHO, ALFACE, TOMATE, PICLES, CEBOLA ROXA</div>
+                    <div class="item-price">R$ 20,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('lomito-carne', -1)">-</button>
+                        <span class="quantity-display" id="qty-lomito-carne">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('lomito-carne', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="lomito-Frango" data-price="20.00">
+                    <div class="item-name">Frango</div>
+                    <div class="item-description">PÃO SIRIO, FRANGO, BATATA FRITA, PASTA DE ALHO, ALFACE, TOMATE, PICLES, CEBOLA ROXA</div>
+                    <div class="item-price">R$ 20,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('lomito-Frango', -1)">-</button>
+                        <span class="quantity-display" id="qty-lomito-Frango">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('lomito-Frango', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="lomito-Misto" data-price="24.00">
+                    <div class="item-name">Misto</div>
+                    <div class="item-description">PÃO SIRIO, FRANGO, CARNE,  BATATA FRITA, PASTA DE ALHO, ALFACE, TOMATE, PICLES, CEBOLA ROXA</div>
+                    <div class="item-price">R$ 20,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('lomito-Misto', -1)">-</button>
+                        <span class="quantity-display" id="qty-lomito-Misto">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('lomito-Misto', 1)">+</button>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-item="churras-grego" data-price="20.00">
+                    <div class="item-name">Churrasco Grego</div>
+                    <div class="item-description">PÃO FRANCES, CARNE, PASTA DE ALHO E SALADA</div>
+                    <div class="item-price">R$ 20,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('churras-grego', -1)">-</button>
+                        <span class="quantity-display" id="qty-churras-grego">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('churras-grego', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+        <h2 class="section-title">Cachorro Quente</h2>
+            <div class="menu-grid" id="Cachorrro-quente">
+                <div class="menu-item" data-item="Dog-simples" data-price="10.00">
+                    <div class="item-name">Dog Simples</div>
+                    <div class="item-description">PÃO, 1 SALSICHA, MILHO, ERVILHA, MAIONESE E BATATA PALHA</div>
+                    <div class="item-price">R$ 10,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Dog-simples', -1)">-</button>
+                        <span class="quantity-display" id="qty-Dog-simples">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Dog-simples', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Dog-Duplo" data-price="12.00">
+                    <div class="item-name">Dog Duplo</div>
+                    <div class="item-description">PÃO, 2 SALSICHA, MILHO, ERVILHA, MAIONESE E BATATA PALHA</div>
+                    <div class="item-price">R$ 12,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Dog-Duplo', -1)">-</button>
+                        <span class="quantity-display" id="qty-Dog-Duplo">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Dog-Duplo', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Dog-deliciu´s" data-price="16.00">
+                    <div class="item-name">Dog Deliciu´s</div>
+                    <div class="item-description">PÃO, MAOINESE CASEIRA, 2 SALSICHA, BACON, QUEIJO, MILHO, ERVILHA E BATATA PALHA</div>
+                    <div class="item-price">R$ 16,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Dog-deliciu´s', -1)">-</button>
+                        <span class="quantity-display" id="qty-Dog-deliciu´s">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Dog-deliciu´s', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="menu-section">
+        <h2 class="section-title">Veggie</h2>
+            <div class="menu-grid" id="Veggie">
+                <div class="menu-item" data-item="Deliciu´s-veggie" data-price="14.00">
+                    <div class="item-name">Deliciu´s Veggie</div>
+                    <div class="item-description">PÃO, MAIONESE, 2 OVOS, QUEIJO, ALFACE, TOMATE, CENOURA, PICLES E BATATA PALHA</div>
+                    <div class="item-price">R$ 14,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-veggie', -1)">-</button>
+                        <span class="quantity-display" id="qty-Deliciu´s-veggie">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Deliciu´s-veggie', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Lomito-veggie" data-price="16.00">
+                    <div class="item-name">Lomito Veggie</div>
+                    <div class="item-description">PÃO SIRIO, PASTA DE ALHO, 2 OVOS, BATATA FRITA, ALFACE E TOMATE </div>
+                    <div class="item-price">R$ 16,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Lomito-veggie', -1)">-</button>
+                        <span class="quantity-display" id="qty-Lomito-veggie">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Lomito-veggie', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+        <h2 class="section-title">Porção</h2>
+            <div class="menu-grid" id="porcao">
+                <div class="menu-item" data-item="batata-por" data-price="20.00">
+                    <div class="item-name">Batata</div>
+                    <div class="item-description">(500g)</div>
+                    <div class="item-price">R$ 20,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('batata-por', -1)">-</button>
+                        <span class="quantity-display" id="qty-batata-por">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('batata-por', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="mandioca-por" data-price="20.00">
+                    <div class="item-name">Mandioca</div>
+                    <div class="item-description">(500g)</div>
+                    <div class="item-price">R$ 20,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('mandioca-por', -1)">-</button>
+                        <span class="quantity-display" id="qty-mandioca-por">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('mandioca-por', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="polenta-por" data-price="20.00">
+                    <div class="item-name">Polenta</div>
+                    <div class="item-description">(500g)</div>
+                    <div class="item-price">R$ 20,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('polenta-por', -1)">-</button>
+                        <span class="quantity-display" id="qty-polenta-por">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('polenta-por', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="frango-por" data-price="30.00">
+                    <div class="item-name">Frango a Passarinho</div>
+                    <div class="item-description">(1kg)</div>
+                    <div class="item-price">R$ 30,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('frango-por', -1)">-</button>
+                        <span class="quantity-display" id="qty-frango-por">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('frango-por', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="tilapia-por" data-price="40.00">
+                    <div class="item-name">Filé De Tilapia </div>
+                    <div class="item-description">(500g)</div>
+                    <div class="item-price">R$ 40,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('tilapia-por', -1)">-</button>
+                        <span class="quantity-display" id="qty-tilapia-por">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('tilapia-por', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="picanha-por" data-price="50.00">
+                    <div class="item-name">Picanha</div>
+                    <div class="item-description">(500g)</div>
+                    <div class="item-price">R$ 50,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('picanha-por', -1)">-</button>
+                        <span class="quantity-display" id="qty-picanha-por">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('picanha-por', 1)">+</button>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-item="calabresa-por" data-price="25.00">
+                    <div class="item-name"> Calabresa</div>
+                    <div class="item-description">(500g)</div>
+                    <div class="item-price">R$ 25,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('calabresa-por', -1)">-</button>
+                        <span class="quantity-display" id="qty-calabresa-por">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('calabresa-por', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+        <h2 class="section-title">Trio</h2>
+            <div class="menu-grid" id="trio">
+                <div class="menu-item" data-item="frango-trio" data-price="60.00">
+                    <div class="item-name">Trio Frango</div>
+                    <div class="item-description">FRANGO (1kg), BATATA (500g), POLENTA (500g) ou MANDIOCA (500g)</div>
+                    <div class="item-price">R$ 60,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('frango-trio', -1)">-</button>
+                        <span class="quantity-display" id="qty-frango-trio">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('frango-trio', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="calabresa-trio" data-price="65.00">
+                    <div class="item-name">Trio Calabresa</div>
+                    <div class="item-description">CALABRESA (500g), BATATA (500g), POLENTA (500g) OU MANDIOCA (500g)</div>
+                    <div class="item-price">R$ 65,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('calabresa-trio', -1)">-</button>
+                        <span class="quantity-display" id="qty-calabresa-trio">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('calabresa-trio', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Tilapia-trio" data-price="65.00">
+                    <div class="item-name">Trio Tilapia</div>
+                    <div class="item-description">TILAPIA (500g), BATATA (500g), POLENTA (500g) OU MANDIOCA (500g)</div>
+                    <div class="item-price">R$ 65,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Tilapia-trio', -1)">-</button>
+                        <span class="quantity-display" id="qty-Tilapia-trio">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Tilapia-trio', 1)">+</button>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-item="picanha-trio" data-price="90.00">
+                    <div class="item-name">Trio Picanha</div>
+                    <div class="item-description">PICANHA (500g), BATATA (500g), POLENTA (500g), OU MANDIOCA (500g)</div>
+                    <div class="item-price">R$ 90,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('picanha-trio', -1)">-</button>
+                        <span class="quantity-display" id="qty-picanha-trio">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('picanha-trio', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="menu-section">
+            <h2 class="section-title">🍢 ESPETINHOS</h2>
+            <div class="menu-grid" id="espetinhos">
+                <div class="menu-item" data-item="espeto-carne" data-price="8.00">
+                    <div class="item-name">Carne</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('espeto-carne', -1)">-</button>
+                        <span class="quantity-display" id="qty-espeto-carne">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('espeto-carne', 1)">+</button>
+                    </div>
+                </div>
+
+          <div class="menu-item" data-item="carne-bacon" data-price="8.00">
+                    <div class="item-name">Carne c/ Bacon </div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('carne-bacon', -1)">-</button>
+                        <span class="quantity-display" id="qty-carne-bacon">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('carne-bacon', 1)">+</button>
+                    </div>
+                </div>
+               
+                <div class="menu-item" data-item="carne-pimentao-cabola" data-price="8.00">
+                    <div class="item-name">Carne c/ Pimentão e cebola </div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('carne-pimentao-cabola', -1)">-</button>
+                        <span class="quantity-display" id="qty-carne-pimentao-cabola">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('carne-pimentao-cabola', 1)">+</button>
+                    </div>
+                </div>
+               
+                <div class="menu-item" data-item="espeto-frango" data-price="8.00">
+                    <div class="item-name">Frango </div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('espeto-frango', -1)">-</button>
+                        <span class="quantity-display" id="qty-espeto-frango">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('espeto-frango', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="frango-bacon" data-price="8.00">
+                    <div class="item-name">Frango c/ Bacon </div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('frango-bacon', -1)">-</button>
+                        <span class="quantity-display" id="qty-frango-bacon">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('frango-bacon', 1)">+</button>
+                    </div>
+                </div>
+
+                 <div class="menu-item" data-item="coraçao-frango" data-price="8.00">
+                    <div class="item-name">Coração </div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('coraçao-frango', -1)">-</button>
+                        <span class="quantity-display" id="qty-coraçao-frango">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('coraçao-frango', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="linguicinha-calabresa" data-price="5.00">
+                    <div class="item-name">Linguicinha Calabresa</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 5,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('linguicinha-calabresa', -1)">-</button>
+                        <span class="quantity-display" id="qty-linguicinha-calabresa">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('linguicinha-calabresa', 1)">+</button>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-item="calabresa" data-price="5.00">
+                    <div class="item-name">Calabresa</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 5,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('calabresa', -1)">-</button>
+                        <span class="quantity-display" id="qty-calabresa">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('calabresa', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="pao-alho" data-price="8.00">
+                    <div class="item-name">Pão de alho </div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('pao-alho', -1)">-</button>
+                        <span class="quantity-display" id="qty-pao-alho">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('pao-alho', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="queijo-coalho" data-price="8.00">
+                    <div class="item-name">Queijo Coalho</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('queijo-coalho', -1)">-</button>
+                        <span class="quantity-display" id="qty-queijo-coalho">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('queijo-coalho', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="tulipa" data-price="8.00">
+                    <div class="item-name">Tulipa  </div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('tulipa', -1)">-</button>
+                        <span class="quantity-display" id="qty-tulipa">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('tulipa', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="kafta" data-price="8.00">
+                    <div class="item-name">Kafta</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 8,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('kafta', -1)">-</button>
+                        <span class="quantity-display" id="qty-kafta">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('kafta', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="picanha" data-price="10.00">
+                    <div class="item-name">Picanha</div>
+                    <div class="item-description"></div>
+                    <div class="item-price">R$ 10,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('picanha', -1)">-</button>
+                        <span class="quantity-display" id="qty-picanha">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('picanha', 1)">+</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="section-title">🥤 BEBIDAS</h2>
+            <div class="menu-grid" id="bebidas">
+                <div class="menu-item" data-item="refrigerante" data-price="5.00">
+                    <div class="item-name"> Coca-Cola</div>
+                    <div class="item-description">(350ml)</div>
+                    <div class="item-price">R$ 5,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('refrigerante', -1)">-</button>
+                        <span class="quantity-display" id="qty-refrigerante">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('refrigerante', 1)">+</button>
+                    </div>
+                </div>
+
+                    <div class="menu-item" data-item="Fanta-uva" data-price="5.00">
+                    <div class="item-name">Fanta Uva</div>
+                    <div class="item-description">(350ml)</div>
+                    <div class="item-price">R$ 5,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Fanta-uva', -1)">-</button>
+                        <span class="quantity-display" id="qty-Fanta-uva">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Fanta-uva', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Fanta-laranja" data-price="5.00">
+                    <div class="item-name">Fanta Laranja</div>
+                    <div class="item-description">(350ml)</div>
+                    <div class="item-price">R$ 5,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Fanta-laranja', -1)">-</button>
+                        <span class="quantity-display" id="qty-Fanta-laranja">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Fanta-laranja', 1)">+</button>
+                    </div>
+                </div>
+
+                <diV class="menu-item" data-item="GUARANA-LATA" data-price="5,00">
+                    <diV class="item-name">Guarana</diV>
+                    <div class="item-description">(350ml)</div>
+                    <div class="item-price">R$ 5,00</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="changeQuantity('GUARANA-LATA', -1)">-</button>
+                            <span class="quantity-display" id="qty-GUARANA-LATA">0</span>
+                            <button class="quantity-btn" onclick="changeQuantity('GUARANA-LATA', 1)">+</button>
+                        </div>
+                </diV>
+
+                <div class="menu-item" data-item="coca-zero" data-price="5,00">
+                    <div class="item-name">Coca-Cola Zero</div>
+                    <div class="item-description">(350ml)</div>
+                    <div class="item-price">R$ 5,00</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="changeQuantity('coca-zero', -1)">-</button>
+                            <span class="quantity-display" id="qty-coca-zero">0</span>
+                            <button class="quantity-btn" onclick="changeQuantity('coca-zero', 1)">+</button>
+                        </div>
+                </div>
+
+                <div class="menu-item" data-item="coca-1l" data-price="8,00">
+                    <div class="item-name">Coca-Cola</div>
+                    <div class="item-description">(1 Litro)</div>
+                    <div class="item-price">R$ 8,00</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="changeQuantity('coca-1l', -1)">-</button>
+                            <span class="quantity-display" id="qty-coca-1l">0</span>
+                            <button class="quantity-btn" onclick="changeQuantity('coca-1l', 1)">+</button>
+                        </div>
+                </div>
+
+                <div class="menu-item" data-item="coca-1l-zero" data-price="8,00">
+                    <div class="item-name">Coca-Cola Zero</div>
+                    <div class="item-description">(1 Litro)</div>
+                    <div class="item-price">R$ 8,00</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="changeQuantity('coca-1l-zero', -1)">-</button>
+                            <span class="quantity-display" id="qty-coca-1l-zero">0</span>
+                            <button class="quantity-btn" onclick="changeQuantity('coca-1l-zero', 1)">+</button>
+                        </div>
+                </div>
+
+                <div class="menu-item" data-item="coca-2l" data-price="12,00">
+                    <div class="item-name">Coca-Cola</div>
+                    <div class="item-description">(2 Litro)</div>
+                    <div class="item-price">R$ 12,00</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="changeQuantity('coca-2L', -1)">-</button>
+                            <span class="quantity-display" id="qty-coca-2L">0</span>
+                            <button class="quantity-btn" onclick="changeQuantity('coca-2L', 1)">+</button>
+                        </div>
+                </div>
+
+                <div class="menu-item" data-item="coca-2l-Zero" data-price="12,00">
+                    <div class="item-name">Coca-Cola Zero</div>
+                    <div class="item-description">(2 Litro)</div>
+                    <div class="item-price">R$ 12,00</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="changeQuantity('coca-2L-Zero', -1)">-</button>
+                            <span class="quantity-display" id="qty-coca-2L-Zero">0</span>
+                            <button class="quantity-btn" onclick="changeQuantity('coca-2L-Zero', 1)">+</button>
+                        </div>
+                </div>
+
+                <div class="menu-item" data-item="guarana-2L" data-price="12.00">
+                    <div class="item-name">Guaraná</div>
+                    <div class="item-description">(2 Litro)</div>
+                    <div class="item-price">R$ 12,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('guarana-2L', -1)">-</button>
+                        <span class="quantity-display" id="qty-guarana-2L">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('guarana-2L', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Fanta-laranja-2L" data-price="11.00">
+                    <div class="item-name">Fanta Laranja</div>
+                    <div class="item-description">(2 Litro)</div>
+                    <div class="item-price">R$ 11,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Fanta-laranja-2L', -1)">-</button>
+                        <span class="quantity-display" id="qty-Fanta-laranja-2L">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Fanta-laranja-2L', 1)">+</button>
+                    </div>
+                </div>
+
+                    <div class="menu-item" data-item="Fanta-uva-2L" data-price="11.00">
+                    <div class="item-name">Fanta Uva</div>
+                    <div class="item-description">(2 Litro)</div>
+                    <div class="item-price">R$ 11,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('guarana-2L-Zero', -1)">-</button>
+                        <span class="quantity-display" id="qty-guarana-2L-Zero">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('guarana-2L-Zero', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Sprite-2L" data-price="11.00">
+                    <div class="item-name">Sprite</div>
+                    <div class="item-description">(2 Litro)</div>
+                    <div class="item-price">R$ 11,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Sprite-2L', -1)">-</button>
+                        <span class="quantity-display" id="qty-Sprite-2L">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Sprite-2L', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Heineken" data-price="6.00">
+                    <div class="item-name">Heineken</div>
+                    <div class="item-description">(350ml)</div>
+                    <div class="item-price">R$ 6,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Heineken', -1)">-</button>
+                        <span class="quantity-display" id="qty-Heineken">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Heineken', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Budweiser" data-price="6.00">
+                    <div class="item-name">Budweiser</div>
+                    <div class="item-description">(350ml)</div>
+                    <div class="item-price">R$ 6,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Budweiser', -1)">-</button>
+                        <span class="quantity-display" id="qty-Budweiser">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Budweiser', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Amistel" data-price="4.00">
+                    <div class="item-name">Amistel</div>
+                    <div class="item-description">(350ml)</div>
+                    <div class="item-price">R$ 4,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Amistel', -1)">-</button>
+                        <span class="quantity-display" id="qty-Amistel">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Amistel', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Original" data-price="5.00">
+                    <div class="item-name">Original</div>
+                    <div class="item-description">(350ml)</div>
+                    <div class="item-price">R$ 5,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Original', -1)">-</button>
+                        <span class="quantity-display" id="qty-Original">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Original', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="Suco" data-price="15.00">
+                    <div class="item-name">Suco Prast</div>
+                    <div class="item-description">(900ml)</div>
+                    <div class="item-price">R$ 15,00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('Suco', -1)">-</button>
+                        <span class="quantity-display" id="qty-Suco">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('Suco', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="agua" data-price="3.50">
+                    <div class="item-name">Água Mineral</div>
+                    <div class="item-description">(500ml)</div>
+                    <div class="item-price">R$ 3,50</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('agua', -1)">-</button>
+                        <span class="quantity-display" id="qty-agua">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('agua', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-item="agua-gas" data-price="3.50"> 
+                    <div class="item-name">Água Minera c/ Gás</div>
+                    <div class="item-description">(500ml)</div>
+                    <div class="item-price">R$ 3,50</div> 
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity('agua-gas', -1)">-</button>
+                        <span class="quantity-display" id="qty-agua-gas">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('agua-gas', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   <div class="order-form">
+    <div class="order-summary" id="orderSummary">
+      <div class="summary-title">📋 Resumo do Pedido</div>
+      <div class="empty-cart" id="emptyCart">Seu carrinho está vazio</div>
+      <div id="summaryItems"></div>
+      <div class="summary-total" id="totalAmount" style="display: none;">
+        Total: R$ <span id="totalValue">0,00</span>
+      </div>
+    </div>
+
+    <form id="orderForm">
+      <h2 class="section-title">📋 Dados para Entrega</h2>
+
+      <div class="form-group">
+        <label for="customerName">Nome Completo *</label>
+        <input type="text" id="customerName" name="customerName" required />
+      </div>
+
+      <div class="form-group">
+        <label for="customerPhone">Telefone/WhatsApp *</label>
+        <input type="tel" id="customerPhone" name="customerPhone" required placeholder="(11) 99999-9999" />
+      </div>
+
+      <!-- Endereço separado -->
+      <div class="form-group">
+        <label for="street">Rua *</label>
+        <input type="text" id="street" name="street" required />
+      </div>
+
+      <div class="form-group">
+        <label for="number">Número *</label>
+        <input type="text" id="number" name="number" required />
+      </div>
+
+      <div class="form-group">
+        
+        <label for="neighborhood">Bairro:</label>
+    <input list="lista-bairros" id="neighborhood" name="neighborhood" placeholder="Digite ou selecione..." required>
+    <datalist id="lista-bairros">
+    <option value="Aeroporto">
+    <option value="Alto Boa Vista">
+    <option value="Aparecidinha">
+    <option value="Arroio Dourado">
+    <option value="Bubas">
+    <option value="Bevely Falls Park">
+    <option value="Campos Iguaçu">
+    <option value="Centro">
+    <option value="Conj B">
+    <option value="Cidade Nova">
+    <option value="Cohiguaçu">
+    <option value="Conj Libra">
+    <option value="Cohapar">
+    <option value="conj Plaza">
+    <option value="Cognopolis">
+    <option value="Gleba Guarani">
+    <option value="Lot Jd das Oliveira">
+    <option value="Lot Witt">
+    <option value="Lot San Cateano">
+    <option value="Museu de Cera">
+    <option value="Mata Verde">
+    <option value="Morumbi 1, 2 e 3">
+    <option value="Multirão">
+    <option value="Marco das 3F">
+    <option value="Portal da Foz">
+    <option value="Parq. das Aves">
+    <option value="Imperatriz">
+    <option value="Monjolo">
+    <option value="Ouro Verde">
+    <option value="Pilar Campestre">
+    <option value="Presidente 1">
+    <option value="Presidente 2">
+    <option value="profilurb´s">
+    <option value="1° de Maio">
+    <option value="Remanso Grande">
+    <option value="Sol de Maio">
+    <option value="Shop Catuai">
+    <option value="Shop Jl">
+    <option value="Terra Alfha 1 e 2">
+    <option value="Tres Lagoas">
+    <option value="Tres Pinheiro">
+    <option value="Vila A">
+    <option value="Vila B">
+    <option value="Vila Adriana 1 e 2'">
+    <option value="Vila Anita Garibaldi">
+    <option value="Vila Boa Esperança">
+    <option value="Vila Borges">
+    <option value="Vila Brasilia">
+    <option value="Vila Carima'">
+    <option value="Vila C Nova e Velha">
+    <option value="Vila Macaranã">
+    <option value="Vila Matilde">
+    <option value="Vila Paraguaia">
+    <option value="vila Pérola">
+    <option value="Vila Portes">
+    <option value="Vila Shallon">
+    <option value="Vila Yolanda">
+    <option value="Vila Florata">
+    <option value="Vila Militar">
+    <option value="Vila Vitorassi">
+    <option value="Jd Acaray">
+    <option value="Jd Alice">
+    <option value="Jd Almada'">
+    <option value="Jd Alvorada">
+    <option value="Jd Almazonas">
+    <option value="Jd América">
+    <option value="Jd Atlantis">
+    <option value="Jd Ana Cristina">
+    <option value="Jd Apora">
+    <option value="Jd Bandeirantes">
+    <option value="Jd Belvedere">
+    <option value="Jd Bourbon">
+    <option value="Jd Boa Vista">
+    <option value="Jd Buenos Aires">
+    <option value="Jd California'">
+    <option value="Jd Canada'">
+    <option value="Jd Cataratas">
+    <option value="Jd Central">
+    <option value="Jd Cedro">
+    <option value="Jd Claudia">
+    <option value="Jd Cohiguaçu">
+    <option value="Jd Coiaba">
+    <option value="Jd Colombeli">
+    <option value="Jd Copacabana">
+    <option value="Jd Curitibano">
+    <option value="Jd Cristina">
+    <option value="Jd das Flores">
+    <option value="Jd das Nações">
+    <option value="Jd das Palmeiras'">
+    <option value="Jd Dom Pedro'">
+    <option value="Jd Don Giovane">
+    <option value="Jd Don Giuseppe">
+    <option value="Jd Dona Amanda">
+    <option value="Jd Dona Fátima">
+    <option value="Jd Dourado">
+    <option value="Jd Duarte">
+    <option value="Jd Eldorado">
+    <option value="Jd Eliza 1 e 2">
+    <option value="Jd Esmeralda 1 e 2">
+    <option value="Jd Estrela">
+    <option value="Jd Europa">
+    <option value="Jd Evagélico">
+    <option value="Jd Festugato">
+    <option value="Jd Floresta">
+    <option value="Jd Guaíra">
+    <option value="Jd Guarapuava 1 e 2">
+    <option value="Jd Lara">
+    <option value="Jd Iguaçu">
+    <option value="Jd italia">
+    <option value="Jd Itamaraty">
+    <option value="Jd Jupira">
+    <option value="Jd Karla">
+    <option value="Jd Lancaster">
+    <option value="Jd Lindoia">
+    <option value="Jd Laranjeira">
+    <option value="Jd Manaus">
+    <option value="Jd Morenitas 1 e 2">
+    <option value="Jd Nacional">
+    <option value="Jd Naipi">
+    <option value="Jd Niterói">
+    <option value="Jd Nova Andradina">
+    <option value="Jd Novo Horizonte">
+    <option value="Jd Ooriente">
+    <option value="Jd Panorama 1 e 2">
+    <option value="Jd Porto Belo">
+    <option value="Jd Paraná">
+    <option value="Jd Patriarca">
+    <option value="Jd Petrópolis">
+    <option value="Jd Polo Centro">
+    <option value="Jd São Luiz">
+    <option value="Jd Santa Rita">
+    <option value="Jd São Miguel">
+    <option value="Jd São Paulo">
+    <option value="Jd São Sebastião">
+    <option value="JD São rafael">
+    <option value="Jd São Roque">
+    <option value="Jd Soledade">
+    <option value="Jd Social">
+    <option value="Jd Taroba">
+    <option value="Jd Tropica">
+    <option value="Jd Universitário">
+    <option value="Jd Vasco da Gama">
+    <option value="Jd Veranei">
+    <option value="Jd Vitória">
+</datalist>
+<span id="taxaEntregaTexto">Taxa: R$ 0,00</span>
+
+
+      <div class="form-group">
+        <label for="paymentMethod">Forma de Pagamento *</label>
+        <div class="payment-options">
+          <label><input type="radio" name="paymentMethod" value="pix" required /> PIX</label>
+          <label><input type="radio" name="paymentMethod" value="cartao" required /> Cartão</label>
+          <label><input type="radio" name="paymentMethod" value="dinheiro" required /> Dinheiro</label>
+        </div>
+      </div>
+
+      <div class="form-group" id="changeGroup" style="display: none;">
+        <label for="changeAmount">Troco para quanto?</label>
+        <input type="number" id="changeAmount" name="changeAmount" placeholder="Ex: 50.00" step="0.01" />
+      </div>
+
+      <div class="form-group">
+        <label for="observations">Observações</label>
+        <textarea id="observations" name="observations" rows="3" placeholder="Ex: Retirar cebola, ponto da carne, no trio se e polenta ou mandioca "></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn" disabled>
+        🚀 Enviar Pedido para WhatsApp
+      </button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
